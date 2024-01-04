@@ -1,0 +1,19 @@
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/orm/hbm">
+    <class name="study.ddd.skeleton.mooc.student.domain.Student" table="students">
+        <composite-id name="id" class="study.ddd.skeleton.mooc.student.domain.StudentId" access="field">
+            <key-property column="id" name="value" length="36" access="field" />
+        </composite-id>
+
+        <component name="name" class="study.ddd.skeleton.mooc.student.domain.StudentName" access="field">
+            <property column="name" name="value" type="string" access="field" />
+        </component>
+
+        <component name="surname" class="study.ddd.skeleton.mooc.student.domain.StudentSurname" access="field">
+            <property column="surname" name="value" type="string" access="field" />
+        </component>
+
+        <component name="email" class="study.ddd.skeleton.mooc.student.domain.StudentEmail" access="field">
+            <property column="email" name="value" type="string" access="field" />
+        </component>
+    </class>
+</hibernate-mapping>
